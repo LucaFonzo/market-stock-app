@@ -1,3 +1,5 @@
 import { Routes } from '@angular/router';
-
-export const routes: Routes = [];
+import { StockSearchComponent } from './components/stock-search/stock-search.component';
+export const routes: Routes = [
+  { path: '',component: StockSearchComponent }
+];
