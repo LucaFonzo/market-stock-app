@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.header h1 {
+  color: #ffffff;
+}
+
+.input-search {
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.login-container button {
+  margin: 10px;
+}

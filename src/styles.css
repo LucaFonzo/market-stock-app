@@ -2,3 +2,19 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.bg-blue {
+  background-color: #011082;
+}
+.bg-blue-ligth {
+  background-color: #344afb;
+}
+.bg-white {
+  background-color: #ffffff;
+}
+.bg-gray {
+  background-color: #eef0f388;
+}

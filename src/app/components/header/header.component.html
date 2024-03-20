@@ -1,3 +1,26 @@
-<mat-toolbar color="primary">
-  <h1>Market Stocks App</h1>
-</mat-toolbar>
+<header>
+  <mat-toolbar color="primary">
+    <div class="container header">
+      <div>
+        <h1>Market Stocks App</h1>
+      </div>
+      <div>
+        <div>
+          <mat-autocomplete #auto="matAutocomplete">
+            @for (stock of searchs; track stock) {
+            <mat-option [value]="">{{stock.name}}</mat-option>
+            }
+          </mat-autocomplete>
+        </div>
+        <div>
+          <input type="text" placeholder="Search a stock..." aria-label="Number" matInput [matAutocomplete]="auto"
+            (keyup)="search()" [(ngModel)]="name" class="input-search">
+        </div>
+      </div>
+      <div class="login-container">
+        <button mat-flat-button color="primary">Register</button>
+        <button mat-flat-button color="basic">Log In</button>
+      </div>
+    </div>
+  </mat-toolbar>
+</header>

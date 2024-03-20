@@ -18,14 +18,14 @@ import { StockDetail } from '../../models/StockDetail';
 })
 export class StockSearchComponent {
   private readonly _stockService: StocksService = inject(StocksService);
-  name = "";
   filter = "";
   currency = "$";
   columnsToDisplay = ['name', 'change', 'price', '%'];
   stock: StockDetail | undefined;
   stocks: Stock[] = [];
-  searchs: StockSearch[] = []
   constructor() {
+  }
+  ngOnInit(): void {
     this.getMostGainers();
   }
 
@@ -61,13 +61,6 @@ export class StockSearchComponent {
         break;
     }
   }
-
-  search() {
-    this._stockService.search(this.name).subscribe(result => {
-      this.searchs = result;
-    })
-  }
-
   updateInfo(stock: StockSearch) {
     this._stockService.getDetailsSymbol(stock.symbol).subscribe(result => {
       this.stock = result[0];
