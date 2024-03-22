@@ -6,6 +6,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .bg-blue {
   background-color: #011082;
 }
@@ -17,4 +18,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .bg-gray {
   background-color: #eef0f388;
+}
+main {
+  height: 100vh;
 }

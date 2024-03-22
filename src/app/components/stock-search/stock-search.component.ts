@@ -9,18 +9,19 @@ import { Stock } from '../../models/Stock';
 import { FormsModule } from '@angular/forms';
 import { StockSearch } from '../../models/StockSearch';
 import { StockDetail } from '../../models/StockDetail';
+import { HeaderComponent } from "../header/header.component";
 @Component({
-  selector: 'app-stock-search',
-  standalone: true,
-  imports: [MatAutocompleteModule,MatCardModule,FormsModule,MatTableModule,MatSelectModule,MatFormFieldModule],
-  templateUrl: './stock-search.component.html',
-  styleUrl: './stock-search.component.css'
+    selector: 'app-stock-search',
+    standalone: true,
+    templateUrl: './stock-search.component.html',
+    styleUrl: './stock-search.component.css',
+    imports: [MatAutocompleteModule, MatCardModule, FormsModule, MatTableModule, MatSelectModule, MatFormFieldModule, HeaderComponent]
 })
 export class StockSearchComponent {
   private readonly _stockService: StocksService = inject(StocksService);
   filter = "";
   currency = "$";
-  columnsToDisplay = ['name', 'change', 'price', '%'];
+  columnsToDisplay = ['name', 'price', 'change', '%'];
   stock: StockDetail | undefined;
   stocks: Stock[] = [];
   constructor() {
